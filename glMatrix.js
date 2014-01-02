@@ -211,8 +211,8 @@ var GLMatrix;
 				.set(2, 1, xAxis);
 
 			this.elements = (GLMatrix.identity(this.dimension)
-								.sum(axis.mul(sine))
-								.sum(axis.mul(axis).mul(1 - cosine))
+								.add(axis.mul(sine))
+								.add(axis.mul(axis).mul(1 - cosine))
 								.mul(this)).elements;
 
 			return this;
