@@ -94,13 +94,13 @@ var GLMatrix;
 				col,
 				result;
 
-			if (this.size !== right.size) {
-				throw new Error("Different matrices size");
-			}
-
 			result = new GLMatrix(this.dimension);
 
 			if (right instanceof GLMatrix) {
+				if (this.size !== right.size) {
+					throw new Error("Different matrices size");
+				}
+
 				for (rightCol = 0; rightCol < this.dimension; rightCol += 1) {
 					for (row = 0; row < this.dimension; row += 1) {
 						for (col = 0; col < this.dimension; col += 1) {
