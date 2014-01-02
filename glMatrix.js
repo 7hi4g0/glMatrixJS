@@ -210,7 +210,7 @@ var GLMatrix;
 				.set(2, 0, -yAxis)
 				.set(2, 1, xAxis);
 
-			this.elements = (GLMatrix.identity()
+			this.elements = (GLMatrix.identity(this.dimension)
 								.sum(axis.mul(sine))
 								.sum(axis.mul(axis).mul(1 - cosine))
 								.mul(this)).elements;
