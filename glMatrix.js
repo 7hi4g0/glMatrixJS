@@ -208,7 +208,7 @@ var GLMatrix;
 
 				.set(1, 0, zAxis)
 				.set(2, 0, -yAxis)
-				.set(2, 1, yAxis);
+				.set(2, 1, xAxis);
 
 			this.elements = (GLMatrix.identity()
 								.sum(axis.mul(sine))
